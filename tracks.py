@@ -45,3 +45,11 @@ def lookup(d, key):
             found = True
     return None
 
+fname = input('Enter file name: ')
+if ( len(fname) < 1 ) : fname = 'Library.xml'
+
+#get data in dict/dict/dict and count them
+stuff = ET.parse(fname)
+all = stuff.findall('dict/dict/dict')
+print('Dict count:', len(all))
+
